@@ -1,38 +1,110 @@
+body {
+  padding: 0%;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: #000000;
+  color: #EEEEEE;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* nav bar */
+
+nav{
+  background-color: #000000;
+  color: #EEEEEE;
+  width: 100%;
+  height: 10%;
+  font-size: 20px;
+  border-bottom: 1px solid #EEEEEE;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* board */
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 60%;
+  margin: 5px;
 }
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.letter {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #868090;
+  margin: 1.5px;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  font-weight:bold;
+}
+
+/* keyboard */
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30%;
+  width: 100vw;
+}
+.line1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2px;
+}
+.line2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.line3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2px;
+}
+.key {
+  width: 45px;
+  height: 45px;
+  margin: 3px;
+  border-radius: 3px;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  background-color: #4c5f61;
+  color: #EEEEEE;
+  cursor: pointer;
+}
+
+/* for keyboard */
+#big {
+  width: 70px;
+  background-color: #111fbe;
+}
+
+
+/* colouring */
+#correct {
+  background-color: #17a319;
+}
+#almost {
+  background-color: #b6a315;
+}
+#error {
+  background-color: #273739;
+}
+/* #4c4747 */
