@@ -8,15 +8,15 @@ function Keyboard() {
   const l2=["A","S","D","F","G","H","J","K","L"];
   const l3=["Z","X","C","V","B","N","M"];
 
-  const handleKeyboard = useCallback((e)=>{
-    if(gameover.gameover) return;
+  const handleKeyboard = useCallback((e)=>{ //this hook is difficult ... need to learn more
+    if(gameover.gameover) return; // if game is over no need to get input
     if(e.key==="Enter"){
       onEnter();
     }
     else if(e.key==="Backspace"){
       onDelete();
     }
-    else{
+    else{ // else find matching key from keyboard 
       l1.forEach((key) => {
         if (e.key.toLowerCase() === key.toLowerCase()) {
           onSelect(key);
@@ -34,8 +34,9 @@ function Keyboard() {
       });
     }
   },[currPos]);
-  useEffect(()=>{
-    document.addEventListener("keydown",handleKeyboard);
+
+  useEffect(()=>{ // ???
+    document.addEventListener("keydown",handleKeyboard); 
     return ()=>{
       document.removeEventListener("keydown",handleKeyboard) ;
     };

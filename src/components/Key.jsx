@@ -5,7 +5,7 @@ import { AppContext } from "../App";
 function Key( {val}) {
   const {onSelect, onDelete, onEnter, keyState} = useContext(AppContext);
   
-  let mystate="";
+  let mystate=""; // need to assign a id for coloring keyboard
   if( val==="Enter"|| val==="Delete"){
     mystate = "big"
   }

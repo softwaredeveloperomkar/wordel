@@ -9,9 +9,11 @@ export const boardDefault = [
     ["","","","",""],
 ];
 
-export const generateWordSet = async () => {
+// as we have a do many words it take time to match
+// so we create a set here
+export const generateWordSet = async () => { 
     let wordSet;
-    let todaysWord;
+    let todaysWord; // random word
     await fetch(wordBank)
       .then((response) => response.text())
       .then((result) => {
